@@ -28,7 +28,7 @@ df[df$y %in% outliers, "y"] = NA
 
 
 #creamos m con prophet
-m <- prophet(df, changepoint.prior.scale = 0.5)
+m <- prophet(df, changepoint.prior.scale = 0.1)
 
 #seteamos para estimamar el futuro a 365 días
 future <- make_future_dataframe(m, periods = 365)
